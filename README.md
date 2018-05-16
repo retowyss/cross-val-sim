@@ -1,6 +1,6 @@
 # Cross Validation Simulator
 
-This small collection of functions evaluates models with respective to their
+This small collection of functions evaluates models with respect to their
 cross-validation RMSE. Any type of model fitting function may be evaluated.
 
 # Getting Started
