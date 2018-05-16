@@ -3,6 +3,9 @@
 This small collection of functions evaluates models with respect to their
 cross-validation RMSE. Any type of model fitting function may be evaluated.
 
+![Preview](/cross-val-sim.png?raw=true)
+
+
 # Getting Started
 
 Instepct and run `main.m` to see this in action.
