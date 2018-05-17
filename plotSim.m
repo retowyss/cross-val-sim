@@ -27,6 +27,9 @@ COLOR            = [1,1,1]*(1- 0.87);
 % Color palette for lines, using material design colors
 PALETTE = [[211,47,47];[48,63,159];[56,142,60];[230,74,25];[123,31,162]]/255;
 
+% Misc
+LINE_WIDTH = pi;
+
 % Drawing
 % Initialize plot
 p = plot(rmses);
@@ -37,32 +40,35 @@ xLab       = xlabel("Folds [k]");
 legendLab  = legend(arrayfun(@(x) {strcat('Model-', num2str(x))}, modparams));
 graphTitle = title('Cross Validation Simulation');
 
+% Set ticks
+xtick = 1:length(folds);
+set(gca, 'xtick', xtick);
+set(gca, 'xticklabel', folds'); 
+
 % Adjust font sizes
 set(xLab, "fontsize", LABEL_SIZE);
 set(yLab, "fontsize", LABEL_SIZE);
 set(legendLab, "fontsize", LEGEND_SIZE); 
 set(graphTitle, "fontsize", TITLE_SIZE);
 
-% Set ticks
-xtick = 1:length(folds);
-set(gca,'xtick',xtick);
-set(gca, 'xticklabel', folds'); 
-
 % Tweak Look
 legend boxoff;
 set(legendLab, "location", "northeastoutside");
-set(p, "linewidth", 3.1415926)
+set(p, "linewidth", LINE_WIDTH)
 
 
-% Give it a dark Material lookfor
+% Make it have pretty colors
 set(gcf,'Color', BACKGROUND_COLOR);
 set(xLab, {'Color'}, COLOR);
 set(yLab, {'Color'}, COLOR);
 
+% If the custom palette has sufficiently many colors use it
 if length(p) <= length(PALETTE)
   for i = 1:length(p) 
     set(p(i),"color", PALETTE(i,:)); 
   end 
 endif
+
+% Bask in the glory of the plot
 
 endfunction

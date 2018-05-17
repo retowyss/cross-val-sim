@@ -21,4 +21,5 @@ parameter k (the number of folds).
 
 # Compatibility
 
-This was developed on Octave and no tests were run for Matlab.
+This was developed on GNU Octave (version 4.0.0) and no tests were run for 
+Matlab.
