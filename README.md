@@ -12,7 +12,7 @@ Instepct and run `main.m` to see this in action.
 
 # Findings
 
-No rigorous experiments were completed. However, we can make two anecdotal 
+No rigorous experiments were completed. However, we can make two 
 observations.
 First, models with the true number of parameters almost always fit best. 
 Second, there is cross over in RMSE between models. This means that what we 
