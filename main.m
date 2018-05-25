@@ -22,6 +22,7 @@ polynomial = (rand(DEGREE + 1, 1) - 0.5);
 y = y + (rand(SAMPLE_SIZE, 1) - 0.5) * ((max(y) - min(y)) * NOISE);
 
 % Run simulation
+% we fit a polynoial model to the data
 rmse = crossVal(x, y, @polyfit, @polyval, MODEL_PARAMETERS, FOLDS);
 
 % Print rmse
