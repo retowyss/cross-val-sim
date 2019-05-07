@@ -8,7 +8,7 @@ cross-validation RMSE. Any type of model fitting function may be evaluated.
 
 ## Getting Started
 
-Instepct and run `main.m` to see this in action.
+Inspect and run `main.m` to see this in action.
 
 ## Findings
 
